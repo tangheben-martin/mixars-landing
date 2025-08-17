@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoundConnect - Where Artists Meet Mixing Engineers</title>
+    <meta name="description" content="The premier platform connecting music artists with professional mixing and mastering engineers. Join the waitlist for early access.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Header -->
+    <nav class="bg-gray-800 px-4 py-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold text-purple-400">
+                <i class="fas fa-music mr-2"></i>SoundConnect
+            </div>
+            <button id="ctaNav" class="bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded-lg transition-colors">
+                Join Waitlist
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-20 px-4 text-center bg-gradient-to-br from-gray-900 to-purple-900">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                Where Artists Meet <span class="text-purple-400">Mixing Engineers</span>
+            </h1>
+            <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Skip the endless searching. Connect with professional mixing and mastering engineers who understand your sound. Launch your music career with confidence.
+            </p>
+            
+            <!-- Email Signup Form -->
+            <div class="bg-gray-800 p-8 rounded-2xl max-w-md mx-auto mb-8">
+                <h3 class="text-2xl font-bold mb-4">Join the Waitlist</h3>
+                <form id="waitlistForm" class="space-y-4">
+                    <div>
+                        <select id="userType" class="w-full p-3 bg-gray-700 rounded-lg border border-gray-600 focus:border-purple-400 focus:outline-none">
+                            <option value="">I am a...</option>
+                            <option value="artist">Music Artist</option>
+                            <option value="engineer">Mixing/Mastering Engineer</option>
+                        </select>
+                    </div>
+                    <div>
+                        <input type="email" id="email" placeholder="Enter your email address" 
+                               class="w-full p-3 bg-gray-700 rounded-lg border border-gray-600 focus:border-purple-400 focus:outline-none" required>
+                    </div>
+                    <button type="submit" class="w-full bg-purple-600 hover:bg-purple-700 p-3 rounded-lg font-semibold transition-colors">
+                        Get Early Access
+                    </button>
+                </form>
+                <p class="text-sm text-gray-400 mt-4">
+                    🚀 Expected launch: Q2 2025 • 📧 No spam, ever
+                </p>
+            </div>
+
+            <div class="flex items-center justify-center space-x-8 text-gray-400">
+                <div class="flex items-center">
+                    <i class="fas fa-users mr-2"></i>
+                    <span id="userCount">247+</span> early adopters
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-star mr-2"></i>
+                    Coming Q2 2025
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="py-16 px-4 bg-gray-800">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-12">The Current Struggle is Real</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-red-900/20 p-6 rounded-xl border border-red-800">
+                    <i class="fas fa-music text-red-400 text-3xl mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-4 text-red-400">For Artists</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li><i class="fas fa-times mr-2 text-red-400"></i>Endless searching on forums and Facebook groups</li>
+                        <li><i class="fas fa-times mr-2 text-red-400"></i>No way to verify engineer quality beforehand</li>
+                        <li><i class="fas fa-times mr-2 text-red-400"></i>Inconsistent communication and timelines</li>
+                        <li><i class="fas fa-times mr-2 text-red-400"></i>Getting ghosted mid-project</li>
+                    </ul>
+                </div>
+                <div class="bg-red-900/20 p-6 rounded-xl border border-red-800">
+                    <i class="fas fa-sliders-h text-red-400 text-3xl mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-4 text-red-400">For Engineers</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li><i class="fas fa-times mr-2 text-red-400"></i>Competing on price alone on freelance sites</li>
+                        <li><i class="fas fa-times mr-2 text-red-400"></i>Difficult to showcase your unique style</li>
+                        <li><i class="fas fa-times mr-2 text-red-400"></i>Inconsistent project flow</li>
+                        <li><i class="fas fa-times mr-2 text-red-400"></i>No proper project management tools</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="py-16 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-12">Your Solution is Coming</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-800 p-6 rounded-xl text-center">
+                    <i class="fas fa-search text-purple-400 text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-4">Smart Matching</h3>
+                    <p class="text-gray-300">Find engineers who specialize in your genre. View portfolios, hear samples, read reviews.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-xl text-center">
+                    <i class="fas fa-handshake text-purple-400 text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-4">Secure Collaboration</h3>
+                    <p class="text-gray-300">Built-in project management, file sharing, and milestone-based payments.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-xl text-center">
+                    <i class="fas fa-shield-alt text-purple-400 text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-4">Quality Guaranteed</h3>
+                    <p class="text-gray-300">Verified professionals, dispute resolution, and satisfaction guarantees.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Preview -->
+    <section class="py-16 px-4 bg-gray-800">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-12">What's Coming</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-gray-700 p-4 rounded-lg">
+                    <i class="fas fa-user-circle text-purple-400 text-2xl mb-2"></i>
+                    <h4 class="font-bold">Rich Profiles</h4>
+                    <p class="text-sm text-gray-300">Showcase your work with audio samples and client testimonials</p>
+                </div>
+                <div class="bg-gray-700 p-4 rounded-lg">
+                    <i class="fas fa-comments text-purple-400 text-2xl mb-2"></i>
+                    <h4 class="font-bold">Direct Messaging</h4>
+                    <p class="text-sm text-gray-300">Communicate seamlessly with integrated chat and file sharing</p>
+                </div>
+                <div class="bg-gray-700 p-4 rounded-lg">
+                    <i class="fas fa-credit-card text-purple-400 text-2xl mb-2"></i>
+                    <h4 class="font-bold">Secure Payments</h4>
+                    <p class="text-sm text-gray-300">Milestone-based payments with dispute resolution</p>
+                </div>
+                <div class="bg-gray-700 p-4 rounded-lg">
+                    <i class="fas fa-mobile-alt text-purple-400 text-2xl mb-2"></i>
+                    <h4 class="font-bold">Mobile First</h4>
+                    <p class="text-sm text-gray-300">Manage projects on the go with our mobile app</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="py-16 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-8">Early Interest is Growing</h2>
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div class="bg-gray-800 p-6 rounded-xl">
+                    <div class="text-3xl font-bold text-purple-400 mb-2">247+</div>
+                    <div class="text-gray-300">Artists Signed Up</div>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-xl">
+                    <div class="text-3xl font-bold text-purple-400 mb-2">89+</div>
+                    <div class="text-gray-300">Engineers Ready</div>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-xl">
+                    <div class="text-3xl font-bold text-purple-400 mb-2">12+</div>
+                    <div class="text-gray-300">Genres Covered</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 px-4 bg-gray-800">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+            <div class="space-y-6">
+                <div class="bg-gray-700 p-6 rounded-xl">
+                    <h3 class="text-xl font-bold mb-3">When will the platform launch?</h3>
+                    <p class="text-gray-300">We're targeting Q2 2025 for beta launch. Waitlist members get first access and special launch pricing.</p>
+                </div>
+                <div class="bg-gray-700 p-6 rounded-xl">
+                    <h3 class="text-xl font-bold mb-3">How much will it cost?</h3>
+                    <p class="text-gray-300">We're planning a subscription model starting at $19/month for basic access, with premium tiers for advanced features. Early adopters get 50% off their first year.</p>
+                </div>
+                <div class="bg-gray-700 p-6 rounded-xl">
+                    <h3 class="text-xl font-bold mb-3">Will there be a mobile app?</h3>
+                    <p class="text-gray-300">Yes! Mobile apps for iOS and Android are planned for launch alongside the web platform.</p>
+                </div>
+                <div class="bg-gray-700 p-6 rounded-xl">
+                    <h3 class="text-xl font-bold mb-3">How do you ensure quality?</h3>
+                    <p class="text-gray-300">All engineers go through a verification process including portfolio review and sample work assessment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-16 px-4 bg-gradient-to-r from-purple-900 to-blue-900">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-6">Ready to Transform Your Music Career?</h2>
+            <p class="text-xl text-gray-300 mb-8">Join hundreds of artists and engineers already on the waitlist</p>
+            <button id="ctaFinal" class="bg-white text-purple-900 px-8 py-4 rounded-lg text-xl font-bold hover:bg-gray-200 transition-colors">
+                Join the Waitlist Now
+            </button>
+            <p class="text-sm text-gray-400 mt-4">
+                No spam. Unsubscribe anytime. Launch expected Q2 2025.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-8 px-4">
+        <div class="max-w-6xl mx-auto text-center">
+            <div class="text-2xl font-bold text-purple-400 mb-4">
+                <i class="fas fa-music mr-2"></i>SoundConnect
+            </div>
+            <p class="text-gray-400 mb-4">Connecting artists with mixing engineers worldwide</p>
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="#" class="text-gray-400 hover:text-purple-400"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-gray-400 hover:text-purple-400"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-gray-400 hover:text-purple-400"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p class="text-sm text-gray-500">© 2025 SoundConnect. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-gray-800 p-8 rounded-xl max-w-md mx-4">
+            <div class="text-center">
+                <i class="fas fa-check-circle text-green-400 text-4xl mb-4"></i>
+                <h3 class="text-2xl font-bold mb-4">Welcome to the Waitlist!</h3>
+                <p class="text-gray-300 mb-6">Thanks for joining! We'll keep you updated on our progress and you'll be among the first to access SoundConnect.</p>
+                <button id="closeModal" class="bg-purple-600 hover:bg-purple-700 px-6 py-2 rounded-lg">
+                    Got it!
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Smooth scrolling for CTA buttons
+        document.getElementById('ctaNav').addEventListener('click', scrollToForm);
+        document.getElementById('ctaFinal').addEventListener('click', scrollToForm);
+
+        function scrollToForm() {
+            document.getElementById('waitlistForm').scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        }
+
+        // Form submission
+        document.getElementById('waitlistForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const userType = document.getElementById('userType').value;
+            
+            if (!email || !userType) {
+                alert('Please fill in all fields');
+                return;
+            }
+            
+            // Here you would integrate with ConvertKit or your chosen email service
+            console.log('Signup:', { email, userType });
+            
+            // Show success modal
+            document.getElementById('successModal').classList.remove('hidden');
+            
+            // Update counter (in real app, this would come from your database)
+            const currentCount = parseInt(document.getElementById('userCount').textContent);
+            document.getElementById('userCount').textContent = (currentCount + 1) + '+';
+            
+            // Reset form
+            document.getElementById('waitlistForm').reset();
+        });
+
+        // Close modal
+        document.getElementById('closeModal').addEventListener('click', function() {
+            document.getElementById('successModal').classList.add('hidden');
+        });
+
+        // Close modal on background click
+        document.getElementById('successModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.classList.add('hidden');
+            }
+        });
+
+        // Animate counter on scroll
+        function animateCounter() {
+            const counter = document.getElementById('userCount');
+            const target = 247;
+            let current = 0;
+            const increment = target / 50;
+            
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                counter.textContent = Math.floor(current) + '+';
+            }, 30);
+        }
+
+        // Start counter animation when page loads
+        window.addEventListener('load', () => {
+            setTimeout(animateCounter, 1000);
+        });
+    </script>
+</body>
+</html>
