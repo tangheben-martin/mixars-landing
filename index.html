@@ -431,14 +431,14 @@
         document.getElementById('ctaFinal').addEventListener('click', scrollToForm);
 
         function scrollToForm() {
-            document.getElementById('waitlistForm').scrollIntoView({ 
+            document.getElementById('contact-form').scrollIntoView({ 
                 behavior: 'smooth',
                 block: 'center'
             });
         }
 
         // Form submission
-        document.getElementById('waitlistForm').addEventListener('submit', async function(e) {
+        document.getElementById('contact-form').addEventListener('submit', async function(e) {
             e.preventDefault();
             
             const email = document.getElementById('email').value;
