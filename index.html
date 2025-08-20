@@ -113,22 +113,29 @@
                     <div class="floating">
                         <div class="glass p-8 rounded-2xl hover-lift">
                             <h3 class="text-2xl font-bold mb-6">Reserve Your Spot</h3>
-                            <form id="waitlistForm" class="space-y-4">
-                                <div>
-                                    <select id="userType" class="w-full p-4 bg-white/5 border border-white/10 rounded-xl focus:border-blue-400 focus:outline-none transition-all duration-300" required>
-                                        <option value="">I am a...</option>
-                                        <option value="artist">Music Artist</option>
-                                        <option value="engineer">Mixing/Mastering Engineer</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <input type="email" id="email" placeholder="Enter your email address" 
-                                           class="w-full p-4 bg-white/5 border border-white/10 rounded-xl focus:border-blue-400 focus:outline-none transition-all duration-300" required>
-                                </div>
-                                <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 p-4 rounded-xl font-semibold transition-all duration-300 hover:scale-105">
-                                    Get Early Access
-                                </button>
-                            </form>
+                            
+                                <form id="contact-form" class="space-y-4">
+                                    <div>
+                                        <input type="text" id="name" placeholder="Your Name" class="w-full p-4 bg-white/5 border border-white/10 rounded-xl focus:border-blue-400 focus:outline-none transition-all duration-300" required />
+                                    </div>                            
+                                    <div>
+                                        <input type="email" id="email" placeholder="Enter your email address" class="w-full p-4 bg-white/5 border border-white/10 rounded-xl focus:border-blue-400 focus:outline-none transition-all duration-300" required>
+                                    </div>
+                                    <div>
+                                        <select id="userType" class="w-full p-4 bg-white/5 border border-white/10 rounded-xl focus:border-blue-400 focus:outline-none transition-all duration-300" required>
+                                            <option value="">I am a...</option>
+                                            <option value="artist">Music Artist</option>
+                                            <option value="engineer">Mixing Engineer</option>
+                                            <option value="engineer">Mastering Engineer</option>
+                                            <option value="engineer">Artist and Engineer</option>
+                                            <option value="engineer">Mixing and Mastering Engineer</option>
+                                        </select>
+                                    </div>
+                                    <button type="submit">Submit</button>
+                                </form>
+                                <p id="response-message"></p>
+                                <script src="script.js"></script>
+                                
                             <p class="text-xs text-gray-400 mt-4 text-center">
                                 Join 300+ musicians already on the list
                             </p>
