@@ -11,7 +11,7 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     const formData = {
         name: document.getElementById('name').value,
         email: document.getElementById('email').value,
-        message: document.getElementById('message').value
+        userType: document.getElementById('userType').value
     };
     
     // Send to YOUR Vercel API (not Google directly)
