@@ -1205,15 +1205,16 @@
                                 <input type="email" id="email" placeholder="Enter your email address" class="form-input" required>
                                 <select id="userType" class="form-input" required>
                                     <option value="">I am a...</option>
-                                    <option value="artist">Music Artist</option>
-                                    <option value="engineer">Mixing Engineer</option>
-                                    <option value="engineer">Mastering Engineer</option>
-                                    <option value="engineer">Artist and Engineer</option>
-                                    <option value="engineer">Mixing and Mastering Engineer</option>
+                                    <option value="Artist">Music Artist</option>
+                                    <option value="MixingEngineer">Mixing Engineer</option>
+                                    <option value="MasteringEngineer">Mastering Engineer</option>
+                                    <option value="ArtistEngineer">Artist and Engineer</option>
+                                    <option value="FullEngineer">Mixing and Mastering Engineer</option>
                                 </select>
                                 <button type="submit" class="form-submit">Submit</button>
                             </form>
                             <p id="response-message"></p>
+                            <script src="script.js"></script>
 
                             <p class="form-note">
                                 Join 300+ musicians already on the list
@@ -1396,52 +1397,7 @@
         </div>
     </div>
 
-    <!-- Cookie Banner -->
-    <div id="cookieBanner" class="cookie-banner">
-        <div class="cookie-content">
-            <div class="cookie-text">
-                We use cookies to enhance your experience and prevent duplicate form submissions.
-            </div>
-            <button id="cookieAccept" class="cookie-accept">Accept</button>
-        </div>
-    </div>
-
     <script>
-        // Cookie management
-        function setCookie(name, value, days) {
-            const expires = new Date();
-            expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
-            document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/`;
-        }
-
-        function getCookie(name) {
-            const nameEQ = name + "=";
-            const ca = document.cookie.split(';');
-            for (let i = 0; i < ca.length; i++) {
-                let c = ca[i];
-                while (c.charAt(0) === ' ') c = c.substring(1, c.length);
-                if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
-            }
-            return null;
-        }
-
-        // Check if user has already submitted or accepted cookies
-        const hasSubmitted = getCookie('mixars_submitted');
-        const hasAcceptedCookies = getCookie('mixars_cookies_accepted');
-
-        // Show cookie banner if not accepted
-        if (!hasAcceptedCookies) {
-            setTimeout(() => {
-                document.getElementById('cookieBanner').classList.add('show');
-            }, 2000);
-        }
-
-        // Cookie banner accept
-        document.getElementById('cookieAccept').addEventListener('click', function() {
-            setCookie('mixars_cookies_accepted', 'true', 365);
-            document.getElementById('cookieBanner').classList.remove('show');
-        });
-
         // Progress bar
         window.addEventListener('scroll', () => {
             const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
@@ -1483,95 +1439,6 @@
                 behavior: 'smooth',
                 block: 'center'
             });
-        }
-
-        // Form submission with cookie check
-        document.getElementById('contact-form').addEventListener('submit', async function(e) {
-            e.preventDefault();
-            
-            // Check if user has already submitted
-            if (hasSubmitted) {
-                showResponseMessage('You have already joined our waitlist! Thank you for your interest.', 'error');
-                return;
-            }
-            
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const userType = document.getElementById('userType').value;
-            
-            if (!name || !email || !userType) {
-                showResponseMessage('Please fill in all fields', 'error');
-                return;
-            }
-            
-            const submitButton = this.querySelector('button[type="submit"]');
-            const originalText = submitButton.textContent;
-            submitButton.disabled = true;
-            submitButton.textContent = 'Adding you...';
-            
-            try {
-                // Simulate API call - replace with your actual endpoint
-                const response = await fetch('/api/subscribe', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        name: name,
-                        email: email,
-                        userType: userType
-                    })
-                });
-                
-                // For demo purposes, we'll simulate success
-                await new Promise(resolve => setTimeout(resolve, 1000));
-                
-                // Set cookie to prevent duplicate submissions
-                setCookie('mixars_submitted', 'true', 365);
-                
-                // Show success modal
-                document.getElementById('successModal').classList.add('show');
-                
-                // Update counter
-                const currentCount = parseInt(document.getElementById('userCount').textContent);
-                document.getElementById('userCount').textContent = (currentCount + 1) + '+';
-                const stat1 = document.getElementById('stat1');
-                stat1.textContent = (currentCount + 1) + '+';
-                
-                // Reset form
-                this.reset();
-                
-                showResponseMessage('Successfully joined! Welcome to Mixars.', 'success');
-                
-            } catch (error) {
-                console.error('Error:', error);
-                // For demo purposes, still show success
-                setCookie('mixars_submitted', 'true', 365);
-                document.getElementById('successModal').classList.add('show');
-                
-                const currentCount = parseInt(document.getElementById('userCount').textContent);
-                document.getElementById('userCount').textContent = (currentCount + 1) + '+';
-                const stat1 = document.getElementById('stat1');
-                stat1.textContent = (currentCount + 1) + '+';
-                
-                this.reset();
-                showResponseMessage('Successfully joined! Welcome to Mixars.', 'success');
-            } finally {
-                submitButton.disabled = false;
-                submitButton.textContent = originalText;
-            }
-        });
-
-        // Show response message
-        function showResponseMessage(message, type) {
-            const responseMessage = document.getElementById('response-message');
-            responseMessage.textContent = message;
-            responseMessage.className = type;
-            responseMessage.style.display = 'block';
-            
-            setTimeout(() => {
-                responseMessage.style.display = 'none';
-            }, 5000);
         }
 
         // Close modal
@@ -1626,16 +1493,6 @@
                     vinyl.style.transform = `translate(-50%, -50%) rotate(${scrolled * 0.2}deg) translateY(${rate}px)`;
                 }
             });
-
-            // Disable form if already submitted
-            if (hasSubmitted) {
-                const form = document.getElementById('contact-form');
-                const inputs = form.querySelectorAll('input, select, button');
-                inputs.forEach(input => {
-                    input.disabled = true;
-                });
-                showResponseMessage('You have already joined our waitlist!', 'success');
-            }
         });
 
         // Keyboard navigation for modal
